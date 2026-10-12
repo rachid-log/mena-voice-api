@@ -1,0 +1,17 @@
+MENA Voice API
+Copyright 2026 Rachid Ait Mohand
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It builds on, but does not include, the following work. Each keeps its own license:
+
+- Habibi-TTS (code: MIT) — https://github.com/SWivid/Habibi-TTS
+- Habibi-TTS model weights — https://huggingface.co/SWivid/Habibi-TTS
+    Specialized MAR, MSA, EGY, ALG, IRQ: Apache License 2.0
+    Specialized SAU, UAE and the Unified model: CC-BY-NC-SA-4.0 (non-commercial only)
+- F5-TTS (code: MIT) — https://github.com/SWivid/F5-TTS
+- Vocos vocoder, charactr/vocos-mel-24khz (MIT) — https://github.com/gemelo-ai/vocos
+
+The weights are downloaded at build or run time from Hugging Face. They are not
+redistributed in this repository. If you use a non-commercial model, your output is
+bound by its non-commercial license.

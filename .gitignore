@@ -1,0 +1,23 @@
+# Secrets: the API token lives here. Never commit it.
+.env
+.env.*
+
+# Saved voice clips (people's voices) and generated audio
+voices/
+out/
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.opus
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/

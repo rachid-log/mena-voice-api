@@ -1,0 +1,10 @@
+# Local run (serve_local.py). Python 3.12 recommended: torch 2.8 has no wheels for 3.14.
+# habibi-tts needs torch < 2.9, and torchaudio / torchvision / torchcodec must match torch.
+torch==2.8.0
+torchaudio==2.8.0
+torchvision==0.23.0
+torchcodec==0.7.0
+habibi-tts==0.1.1
+fastapi[standard]
+python-multipart
+# Deploying to Modal only needs the CLI: `uvx modal deploy modal_app.py`

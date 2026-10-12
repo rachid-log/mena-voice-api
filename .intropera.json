@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "title": {
+    "en": "MENA Voice API",
+    "fr": "MENA Voice API"
+  },
+  "text": {
+    "en": "A REST API that clones a voice from a 10-second clip and speaks Moroccan Darija, Standard Arabic and other dialects. Serverless GPU, cents per batch.",
+    "fr": "Une API REST qui clone une voix à partir de 10 secondes d'audio et parle darija, arabe standard et d'autres dialectes. GPU serverless, quelques centimes."
+  },
+  "context": {
+    "en": "Project by Rachid Ait Mohand, October 2026",
+    "fr": "Projet de Rachid Ait Mohand, octobre 2026"
+  },
+  "tech": ["Python", "FastAPI", "Modal", "PyTorch", "Habibi-TTS", "Google Colab"],
+  "demo": "https://colab.research.google.com/github/rachid-log/mena-voice-api/blob/main/colab/darija_voice_clone.ipynb",
+  "image": {
+    "path": ".intropera/cover.png",
+    "alt": {
+      "en": "MENA Voice API: a 10-second voice clip goes through a GPU API and comes out as Darija and Arabic speech.",
+      "fr": "MENA Voice API : un extrait de 10 secondes passe par une API GPU et ressort en darija et en arabe."
+    },
+    "crop": "center"
+  }
+}
