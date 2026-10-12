@@ -204,7 +204,8 @@ the generated sentence correctly.
 - Then the key find: Habibi also ships **specialized MSA, Egyptian, Algerian and Iraqi models,
   all Apache-2.0**. We added them (plus the non-commercial Saudi and Emirati ones) to the
   catalog. That's what turned a Darija tool into a **MENA** voice API, with commercial-safe
-  Standard Arabic.
+  Standard Arabic. First live call to `msa` (voice `rachid-msa`): **24.8 s**, including the
+  1.35 GB download on a warm GPU.
 
 ---
 
@@ -216,11 +217,19 @@ The first production use was an Instagram reel for **Intropera's weekly AI round
    with Latin brand names and a spoken text with brand names in Arabic letters (جيميناي،
    أوبن إي آي) and numbers as words (ميتين وسبعين).
 2. **The user approved the script before any GPU time was spent.**
-3. Then (still in progress when this was written): one API call per line, with fixed seeds.
-   The existing glassy Remotion reel is reused, with Arabic right-to-left captions and
-   on-screen text, and real brand logos.
+3. Then one API call per line with fixed seeds (4201–4209). The first pass at speed 1.0 made the
+   reel 54.5 s, over the 50 s target, so a second pass at **speed 1.15** brought the voice to 44.6 s.
+   That's 18 calls in total, with no failures.
+4. The existing glassy Remotion reel was turned into a shared component. W41 (English) and W42
+   (Darija) now use the same code. W42 got Arabic right-to-left on-screen text and captions
+   (IBM Plex Sans Arabic), plus official logos. The W41 frames stayed pixel-identical.
+5. The audio mix clipped on the first render (the voice peaked at 0 dB). Turning the voice down
+   1.9 dB fixed it: peak −0.8 dB, average −18.3 dB.
 
-**Estimated cost of a reel's voice:** about $0.04 per pass, $0.10–0.15 with retakes.
+**Result:** a 48.4 s, 1080×1920 reel (9.5 MB). The sub-agent used about 0.5 M tokens in about
+48 minutes, inside the estimate given before it started (0.3–0.6 M tokens, 30–50 min).
+
+**Cost of a reel's voice:** about $0.04 per pass (2 passes here).
 
 ---
 
